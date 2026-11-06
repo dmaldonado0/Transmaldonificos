@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "TransMaldonificos | Transporte especializado",
+  title: "TransMaldonificos | Logistica y transporte especializado de vehículos",
   description:
     "TransMaldonificos. Soluciones de transporte especializado de vehículos, seguridad, compromiso y confianza en cada recorrido.",
 };
