@@ -85,7 +85,7 @@ export default function Home() {
         >
           <div className="mx-auto max-w-7xl">
             <span className="text-sm font-bold uppercase tracking-[0.3em] text-[#C8102E]">
-              TransporT
+              TransMaldonificos
             </span>
 
             <h2 className="mt-5 max-w-3xl text-4xl font-black md:text-6xl">
@@ -134,7 +134,7 @@ export default function Home() {
       </main>
 
       <footer className="bg-black px-6 py-8 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} TransporT. Todos los derechos reservados.
+        © {new Date().getFullYear()} TransMaldonificos. Todos los derechos reservados.
       </footer>
     </>
   );

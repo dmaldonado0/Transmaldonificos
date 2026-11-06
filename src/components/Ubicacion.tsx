@@ -41,7 +41,7 @@ export default function Ubicacion() {
               </div>
 
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C8102E]">
-                TransporT · Bogotá D.C.
+                TransMaldonificos · Bogotá D.C.
               </span>
 
               <h3 className="mt-5 text-2xl font-black">
@@ -91,7 +91,7 @@ export default function Ubicacion() {
           <div className="relative min-h-[420px] overflow-hidden border border-white/10 bg-[#222222]">
 
             <iframe
-              title="Ubicación de TransporT en Bogotá"
+              title="Ubicación de TransMaldonificos en Bogotá"
               src="https://maps.google.com/maps?q=4.6647247,-74.1445229&z=21&output=embed"
               width="100%"
               height="100%"
