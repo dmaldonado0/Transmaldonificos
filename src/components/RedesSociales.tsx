@@ -2,34 +2,30 @@
 const redes = [
   {
     nombre: "Instagram",
-    usuario: "@TU_INSTAGRAM",
-    url: "https://www.instagram.com/TU_USUARIO",
+    usuario: "@transmaldonificos",
+    url: "https://www.instagram.com/transmaldonificos",
   },
   {
     nombre: "Facebook",
-    usuario: "TransporT",
-    url: "https://www.facebook.com/TU_PAGINA",
+    usuario: "TransMaldonificos",
+    url: "https://www.facebook.com/share/1CZYDCiYCq/?mibextid=wwXIfr",
   },
   {
     nombre: "TikTok",
-    usuario: "@TU_TIKTOK",
-    url: "https://www.tiktok.com/@TU_USUARIO",
+    usuario: "@transmaldonificoss",
+    url: "https://www.tiktok.com/@transmaldonificoss",
   },
   {
     nombre: "WhatsApp",
     usuario: "Escríbenos directamente",
-    url: "https://wa.me/57XXXXXXXXXX",
+    url: "https://wa.me/573219467913",
   },
   {
     nombre: "Correo electrónico",
-    usuario: "TU_CORREO",
-    url: "mailto:TU_CORREO",
+    usuario: "transmaldonificos@gmail.com",
+    url: "mailto:transmaldonificos@gmail.com",
   },
-  {
-    nombre: "LinkedIn",
-    usuario: "TransporT",
-    url: "https://www.linkedin.com/company/TU_EMPRESA",
-  },
+  
 ];
 
 export default function RedesSociales() {
@@ -64,7 +60,7 @@ export default function RedesSociales() {
             >
               <div>
                 <span className="text-xs font-bold text-[#C8102E]">
-                  0{index + 1} / REDES
+                  0{index + 1}  REDES
                 </span>
 
                 <h3 className="mt-4 text-xl font-black">

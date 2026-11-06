@@ -114,7 +114,7 @@ export default function Ubicacion() {
 
               <div>
                 <p className="text-sm font-black text-white">
-                  TRANSPOR<span className="text-[#C8102E]">T.</span>
+                  TransMaldonificos<span className="text-[#C8102E]">.</span>
                 </p>
 
                 <p className="mt-1 text-xs text-gray-400">
