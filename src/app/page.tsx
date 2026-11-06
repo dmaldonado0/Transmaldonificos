@@ -1,69 +1,141 @@
-import Image from "next/image";
+
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Ubicacion from "@/components/Ubicacion";
+import RedesSociales from "@/components/RedesSociales";
 
 export default function Home() {
+  const servicios = [
+    {
+      numero: "01",
+      titulo: "Automóviles",
+      descripcion:
+        "Transporte de automóviles particulares y vehículos nuevos.",
+    },
+    {
+      numero: "02",
+      titulo: "Motocicletas",
+      descripcion:
+        "Movilización de motocicletas con atención en su manipulación y traslado.",
+    },
+    {
+      numero: "03",
+      titulo: "Camionetas",
+      descripcion:
+        "Soluciones de transporte para camionetas y vehículos utilitarios.",
+    },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <>
+      <Navbar />
+
+      <main className="min-h-screen w-full overflow-hidden">
+        <Hero />
+
+        {/* SERVICIOS */}
+        <section
+          id="servicios"
+          className="bg-white px-6 py-28 text-black md:px-10"
+        >
+          <div className="mx-auto max-w-7xl">
+            <span className="text-sm font-bold uppercase tracking-[0.3em] text-[#C8102E]">
+              Nuestros servicios
+            </span>
+
+            <h2 className="mt-5 max-w-3xl text-4xl font-black leading-tight tracking-tight md:text-6xl">
+              TRANSPORTE ESPECIALIZADO PARA CADA VEHÍCULO.
+            </h2>
+
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-500">
+              Conectamos destinos a través de soluciones de transporte
+              diseñadas para movilizar vehículos de manera organizada
+              y responsable.
+            </p>
+
+            <div className="mt-14 grid gap-6 md:grid-cols-3">
+              {servicios.map((servicio) => (
+                <article
+                  key={servicio.numero}
+                  className="group border border-gray-200 p-8 transition duration-300 hover:-translate-y-2 hover:border-[#C8102E] hover:shadow-xl"
+                >
+                  <span className="text-sm font-black text-[#C8102E]">
+                    / {servicio.numero}
+                  </span>
+
+                  <h3 className="mt-12 text-2xl font-black">
+                    {servicio.titulo}
+                  </h3>
+
+                  <p className="mt-4 leading-7 text-gray-500">
+                    {servicio.descripcion}
+                  </p>
+
+                  <div className="mt-8 h-1 w-12 bg-[#C8102E] transition-all group-hover:w-full" />
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* NOSOTROS */}
+        <section
+          id="nosotros"
+          className="bg-[#111111] px-6 py-24 text-white md:px-10"
+        >
+          <div className="mx-auto max-w-7xl">
+            <span className="text-sm font-bold uppercase tracking-[0.3em] text-[#C8102E]">
+              TransporT
+            </span>
+
+            <h2 className="mt-5 max-w-3xl text-4xl font-black md:text-6xl">
+              MOVILIZAMOS CON RESPONSABILIDAD.
+            </h2>
+
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-400">
+              Trabajamos para conectar personas y empresas con soluciones
+              de transporte especializado de vehículos.
+            </p>
+          </div>
+        </section>
+
+        {/* CONTACTO */}
+        <section
+          id="contacto"
+          className="bg-[#C8102E] px-6 py-24 text-white md:px-10"
+        >
+          <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+            <div>
+              <span className="text-sm font-bold uppercase tracking-[0.3em]">
+                Hablemos de tu próximo transporte
+              </span>
+
+              <h2 className="mt-4 text-4xl font-black md:text-6xl">
+                ¿QUÉ NECESITAS TRANSPORTAR?
+              </h2>
+            </div>
+
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://wa.me/57XXXXXXXXXX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white px-8 py-5 font-black text-[#111111] transition hover:bg-black hover:text-white"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+              CONTACTAR POR WHATSAPP →
+            </a>
+          </div>
+        </section>
+
+        {/* REDES SOCIALES */}
+        <RedesSociales />
+
+        {/* UBICACIÓN ANTERIOR */}
+        <Ubicacion />
       </main>
-    </div>
+
+      <footer className="bg-black px-6 py-8 text-center text-sm text-gray-400">
+        © {new Date().getFullYear()} TransporT. Todos los derechos reservados.
+      </footer>
+    </>
   );
 }
