@@ -1,145 +1,105 @@
 
+const imagenHero =
+  "https://images.unsplash.com/photo-1761993600321-757e086491c0?auto=format&fit=crop&fm=jpg&q=85&w=2400";
+
 export default function Hero() {
   return (
     <section
       id="inicio"
-      style={{
-        position: "relative",
-        display: "flex",
-        alignItems: "center",
-        width: "100%",
-        minHeight: "780px",
-        paddingTop: "80px",
-        overflow: "hidden",
-        backgroundColor: "#111111",
-        color: "#ffffff",
-      }}
+      className="relative isolate flex min-h-[850px] w-full items-center overflow-hidden bg-[#090909] pt-20 text-white sm:min-h-[820px] lg:min-h-[850px]"
     >
-      {/* Fondo */}
+      {/* FOTOGRAFÍA DE FONDO */}
       <div
+        className="absolute inset-0 -z-20 bg-cover bg-[position:58%_center] md:bg-center"
         style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage:
-            "linear-gradient(90deg, rgba(10,10,10,.96), rgba(10,10,10,.75) 55%, rgba(10,10,10,.2)), url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=2000&q=85')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundImage: `url("${imagenHero}")`,
         }}
       />
 
-      {/* Contenido */}
-      <div
-        style={{
-          position: "relative",
-          zIndex: 2,
-          width: "100%",
-          maxWidth: "1280px",
-          margin: "0 auto",
-          padding: "80px 32px",
-        }}
-      >
-        <div style={{ maxWidth: "850px" }}>
-          <p
-            style={{
-              color: "#ffffff",
-              fontSize: "13px",
-              fontWeight: 700,
-              letterSpacing: "5px",
-              marginBottom: "30px",
-              textTransform: "uppercase",
-            }}
-          >
-            <span style={{ color: "#C8102E" }}>━━━━</span> Transporte especializado
-          </p>
+      {/* CAPAS OSCURAS */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#080808] via-[#080808]/85 to-[#080808]/25" />
 
-          <h1
-            style={{
-              fontSize: "clamp(48px, 7vw, 88px)",
-              fontWeight: 900,
-              lineHeight: 1.02,
-              letterSpacing: "-3px",
-              margin: 0,
-            }}
-          >
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#080808]/95 via-transparent to-[#080808]/30" />
+
+      <div className="absolute inset-0 -z-10 bg-black/20" />
+
+      {/* DETALLE ROJO LATERAL */}
+      <div className="absolute left-0 top-1/2 hidden h-40 w-1 -translate-y-1/2 bg-[#C8102E] lg:block" />
+
+      {/* CONTENIDO PRINCIPAL */}
+      <div className="mx-auto w-full max-w-[1400px] px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+        <div className="max-w-[850px]">
+          {/* ETIQUETA */}
+          <div className="mb-7 flex items-center gap-3 sm:mb-9">
+            <span className="h-[2px] w-10 bg-[#C8102E] sm:w-14" />
+
+            <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-gray-200 sm:text-xs sm:tracking-[0.4em]">
+              Transporte especializado
+            </p>
+          </div>
+
+          {/* TÍTULO */}
+          <h1 className="text-[clamp(2.8rem,7.2vw,6.5rem)] font-black leading-[0.98] tracking-[-0.055em]">
             MOVEMOS
             <br />
             VEHÍCULOS.
             <br />
-            <span style={{ color: "#C8102E" }}>CONECTAMOS</span>
+
+            <span className="text-[#D10F35]">
+              CONECTAMOS
+            </span>
+
             <br />
             DESTINOS.
           </h1>
 
-          <p
-            style={{
-              maxWidth: "550px",
-              marginTop: "28px",
-              color: "#dddddd",
-              fontSize: "18px",
-              lineHeight: 1.8,
-            }}
-          >
+          {/* DESCRIPCIÓN */}
+          <p className="mt-7 max-w-[540px] text-[15px] leading-7 text-gray-300 sm:mt-8 sm:text-lg sm:leading-8">
             Soluciones de transporte especializado de vehículos.
             Seguridad, compromiso y respaldo en cada recorrido.
           </p>
 
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "16px",
-              marginTop: "35px",
-            }}
-          >
+          {/* BOTONES */}
+          <div className="mt-9 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:gap-4">
             <a
               href="#contacto"
-              style={{
-                background: "#C8102E",
-                color: "white",
-                padding: "19px 28px",
-                fontSize: "13px",
-                fontWeight: 800,
-              }}
+              className="flex min-h-[58px] w-full items-center justify-center gap-3 bg-[#C8102E] px-7 py-4 text-center text-xs font-black tracking-wide text-white transition duration-300 hover:-translate-y-1 hover:bg-[#A50D25] sm:w-auto sm:min-w-[220px]"
             >
-              COTIZAR TRANSPORTE →
+              COTIZAR TRANSPORTE
+              <span className="text-lg">→</span>
             </a>
 
             <a
               href="#servicios"
-              style={{
-                border: "1px solid white",
-                color: "white",
-                padding: "19px 28px",
-                fontSize: "13px",
-                fontWeight: 800,
-              }}
+              className="flex min-h-[58px] w-full items-center justify-center border border-white/70 bg-black/20 px-7 py-4 text-center text-xs font-black tracking-wide text-white backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#C8102E] hover:bg-[#C8102E] sm:w-auto sm:min-w-[205px]"
             >
               CONOCER SERVICIOS
             </a>
           </div>
 
-          <div
-            style={{
-              display: "flex",
-              gap: "55px",
-              marginTop: "65px",
-              paddingTop: "25px",
-              borderTop: "1px solid #ffffff40",
-            }}
-          >
-            {["COMPROMISO", "SEGURIDAD", "CONFIANZA"].map((item, i) => (
-              <div key={item}>
-                <strong style={{ display: "block", fontSize: "27px" }}>
-                  0{i + 1}
-                </strong>
-                <span
-                  style={{
-                    fontSize: "11px",
-                    color: "#aaaaaa",
-                    letterSpacing: "2px",
-                  }}
-                >
-                  {item}
+          {/* INDICADORES */}
+          <div className="mt-12 grid max-w-[550px] grid-cols-3 border-t border-white/25 pt-6 sm:mt-16 sm:pt-8">
+            {[
+              {
+                numero: "01",
+                texto: "COMPROMISO",
+              },
+              {
+                numero: "02",
+                texto: "SEGURIDAD",
+              },
+              {
+                numero: "03",
+                texto: "CONFIANZA",
+              },
+            ].map((item) => (
+              <div key={item.numero} className="flex flex-col gap-2">
+                <span className="text-3xl font-black tracking-tight sm:text-4xl">
+                  {item.numero}
+                </span>
+
+                <span className="text-[8px] font-bold tracking-[0.16em] text-gray-400 sm:text-[10px] sm:tracking-[0.22em]">
+                  {item.texto}
                 </span>
               </div>
             ))}
@@ -147,16 +107,8 @@ export default function Hero() {
         </div>
       </div>
 
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          width: "120px",
-          height: "5px",
-          background: "#C8102E",
-        }}
-      />
+      {/* LÍNEA INFERIOR */}
+      <div className="absolute bottom-0 left-0 h-[4px] w-24 bg-[#C8102E] sm:w-36" />
     </section>
   );
 }
