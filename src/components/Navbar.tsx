@@ -19,18 +19,22 @@ export default function Navbar() {
 
   return (
     <header className="fixed left-0 top-0 z-50 w-full border-b border-black/10 bg-white/95 shadow-sm backdrop-blur-xl">
+      <nav className="mx-auto flex h-[76px] max-w-[1400px] items-center justify-between px-4 sm:px-8 lg:h-[86px] lg:px-12">
 
-      <nav className="mx-auto flex h-[76px] max-w-[1400px] items-center justify-between px-5 sm:px-8 lg:h-[86px] lg:px-12">
-
-        {/* LOGO */}
+        {/* LOGO OFICIAL */}
         <Link
           href="#inicio"
           onClick={cerrarMenu}
-          className="group flex items-center text-[25px] font-black tracking-[-0.07em] text-[#111111] sm:text-[29px]"
+          className="flex min-w-0 items-center gap-2 sm:gap-3"
         >
-          TRANSPOR
-          <span className="text-[#C8102E] transition group-hover:text-black">
-            T.
+          <img
+            src="/imagenes/Transmaldonificosimagen.png"
+            alt="Logo TransMaldonificos"
+            className="h-11 w-11 shrink-0 rounded-full object-contain sm:h-14 sm:w-14"
+          />
+
+          <span className="whitespace-nowrap text-[18px] font-black tracking-[-0.07em] text-[#111111] sm:text-[25px] lg:text-[28px]">
+            TRANSMALDONIFICOS<span className="text-[#C8102E]">.</span>
           </span>
         </Link>
 
@@ -60,7 +64,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMenuAbierto(!menuAbierto)}
-          className="flex h-11 w-11 items-center justify-center border border-black/10 text-[#111111] transition hover:border-[#C8102E] hover:text-[#C8102E] lg:hidden"
+          className="flex h-11 w-11 shrink-0 items-center justify-center border border-black/10 text-[#111111] transition hover:border-[#C8102E] hover:text-[#C8102E] lg:hidden"
           aria-label={menuAbierto ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={menuAbierto}
           aria-controls="menu-movil"
@@ -83,18 +87,16 @@ export default function Navbar() {
       >
         <div className="px-6 pb-7 pt-4 sm:px-9">
 
-          {/* ENCABEZADO */}
           <div className="mb-5 flex items-center justify-between">
             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500">
               Navegación
             </span>
 
             <span className="text-[10px] font-bold tracking-widest text-[#C8102E]">
-              TRANSPOR T.
+              TRANSMALDONIFICOS
             </span>
           </div>
 
-          {/* ENLACES */}
           <div className="flex flex-col">
             {enlaces.map((enlace, index) => (
               <a
@@ -121,7 +123,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* BOTÓN COTIZACIÓN */}
           <a
             href="#contacto"
             tabIndex={menuAbierto ? 0 : -1}
