@@ -9,12 +9,12 @@ export default function Hero() {
       className="relative isolate flex min-h-[850px] w-full items-center overflow-hidden bg-[#090909] pt-20 text-white sm:min-h-[820px] lg:min-h-[850px]"
     >
       {/* FOTOGRAFÍA DE FONDO */}
-      <div
-        className="absolute inset-0 -z-20 bg-cover bg-[position:58%_center] md:bg-center"
-        style={{
-          backgroundImage: `url("${imagenHero}")`,
-        }}
-      />
+<div
+  className="absolute inset-0 -z-20 bg-cover bg-[position:58%_center] md:bg-center"
+  style={{
+    backgroundImage: "url('/imagenes/transmaldonificosimagenlarga.png')",
+  }}
+/>
 
       {/* CAPAS OSCURAS */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#080808] via-[#080808]/85 to-[#080808]/25" />

@@ -1,13 +1,25 @@
 
+"use client";
+
+import dynamic from "next/dynamic";
+
+const MapaUbicacion = dynamic(
+  () => import("@/components/MapaUbicacion"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex min-h-[420px] items-center justify-center bg-[#eeeeee] text-sm font-bold text-gray-500">
+        Cargando mapa...
+      </div>
+    ),
+  }
+);
+
 export default function Ubicacion() {
   return (
-    <section
-      id="ubicacion"
-      className="bg-[#111111] py-24 text-white"
-    >
+    <section id="ubicacion" className="bg-[#111111] py-24 text-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
 
-        {/* ENCABEZADO */}
         <div className="mb-14">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-[2px] w-12 bg-[#C8102E]" />
@@ -23,21 +35,18 @@ export default function Ubicacion() {
           </h2>
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-gray-400 md:text-lg">
-            Conoce nuestra ubicación y encuentra nuestra sede en
-            Bogotá, Colombia. Estamos listos para coordinar tu
-            próximo servicio de transporte.
+            Encuentra nuestra sede en Bogotá, Colombia.
+            Estamos listos para coordinar tu próximo servicio
+            de transporte.
           </p>
         </div>
 
-        {/* CONTENIDO */}
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
 
-          {/* INFORMACIÓN DE LA SEDE */}
           <div className="flex flex-col justify-between border border-white/10 bg-[#191919] p-8 md:p-10">
-
             <div>
-              <div className="mb-8 flex h-14 w-14 items-center justify-center border border-[#C8102E] text-2xl text-[#C8102E]">
-                T
+              <div className="mb-8 flex h-14 w-14 items-center justify-center border border-[#C8102E] text-2xl font-black text-[#C8102E]">
+                T.
               </div>
 
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C8102E]">
@@ -82,51 +91,29 @@ export default function Ubicacion() {
               rel="noopener noreferrer"
               className="mt-10 flex w-fit items-center gap-3 bg-[#C8102E] px-7 py-4 text-sm font-bold uppercase tracking-wider transition hover:bg-[#A50D25]"
             >
-              Ver ubicación en Google Maps
+              Cómo llegar
               <span>↗</span>
             </a>
           </div>
 
-          {/* MAPA */}
-          <div className="relative min-h-[420px] overflow-hidden border border-white/10 bg-[#222222]">
+          <div className="relative min-h-[420px] overflow-hidden border-2 border-black bg-white shadow-[0_0_0_1px_rgba(255,255,255,0.12)]">
+            <MapaUbicacion />
 
-            <iframe
-              title="Ubicación de TransMaldonificos en Bogotá"
-              src="https://maps.google.com/maps?q=4.6647247,-74.1445229&z=21&output=embed"
-              width="100%"
-              height="100%"
-              style={{
-                border: 0,
-                minHeight: "420px",
-                display: "block",
-                filter: "grayscale(100%) contrast(1.05)",
-              }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
-
-            {/* MARCADOR PERSONALIZADO */}
-            <div className="pointer-events-none absolute bottom-6 left-6 flex items-center gap-3 border border-white/10 bg-[#111111]/95 px-5 py-4 shadow-xl">
-              <div className="flex h-10 w-10 items-center justify-center bg-[#C8102E] text-lg font-black text-white">
-                T
-              </div>
+            <div className="pointer-events-none absolute bottom-5 left-5 z-[500] flex items-center gap-3 border border-white/10 bg-[#111111]/95 px-5 py-4 shadow-xl">
+              <span className="h-3 w-3 animate-pulse rounded-full bg-[#C8102E]" />
 
               <div>
                 <p className="text-sm font-black text-white">
-                  TransMaldonificos<span className="text-[#C8102E]">.</span>
+                  TransMaldonificos.
                 </p>
-
                 <p className="mt-1 text-xs text-gray-400">
-                  Bogotá D.C. · Colombia
+                  Nuestra sede · Bogotá D.C.
                 </p>
               </div>
             </div>
-
           </div>
         </div>
 
-        {/* FRANJA INFERIOR */}
         <div className="mt-10 flex flex-col justify-between gap-4 border-t border-white/10 pt-7 sm:flex-row sm:items-center">
           <p className="text-sm text-gray-500">
             Transporte especializado · Bogotá · Colombia

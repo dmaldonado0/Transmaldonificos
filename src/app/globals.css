@@ -35,3 +35,68 @@ a {
   background: var(--red);
   color: var(--white);
 }
+
+/* MAPA DE UBICACIÓN */
+.truck-map-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+.truck-marker {
+  position: relative;
+  width: 110px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.truck-pulse {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 48px;
+  height: 15px;
+  border: 2px solid #C8102E;
+  border-radius: 50%;
+  background: rgba(200, 16, 46, 0.18);
+  transform: translateX(-50%);
+  animation: truck-pulse 1.8s ease-out infinite;
+}
+
+.truck-illustration {
+  position: relative;
+  z-index: 2;
+  animation: truck-bounce 1.8s ease-in-out infinite;
+  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.7));
+}
+
+.truck-wheel {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: truck-wheel-spin 1.2s linear infinite;
+}
+
+@keyframes truck-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes truck-pulse {
+  0% {
+    opacity: 0.9;
+    transform: translateX(-50%) scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scale(1.8);
+  }
+}
+
+@keyframes truck-wheel-spin {
+  to { transform: rotate(360deg); }
+}
+/* MAPA OSCURO */
+.mapa-oscuro {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(85%);
+}

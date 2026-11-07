@@ -19,23 +19,19 @@ export default function Navbar() {
 
   return (
     <header className="fixed left-0 top-0 z-50 w-full border-b border-black/10 bg-white/95 shadow-sm backdrop-blur-xl">
-      <nav className="mx-auto flex h-[76px] max-w-[1400px] items-center justify-between px-4 sm:px-8 lg:h-[86px] lg:px-12">
+      <nav className="mx-auto flex h-[80px] max-w-[1400px] items-center justify-between px-4 sm:px-8 lg:h-[92px] lg:px-12">
 
-        {/* LOGO OFICIAL */}
+        {/* LOGO OFICIAL TRANSMALDONIFICOS */}
         <Link
           href="#inicio"
           onClick={cerrarMenu}
-          className="flex min-w-0 items-center gap-2 sm:gap-3"
+          className="flex min-w-0 shrink items-center"
         >
           <img
-            src="/imagenes/Transmaldonificosimagen.png"
-            alt="Logo TransMaldonificos"
-            className="h-11 w-11 shrink-0 rounded-full object-contain sm:h-14 sm:w-14"
+            src="/imagenes/logo.transmaldonificoss.png"
+            alt="TransMaldonificos - Sano tu vehículo, salvo"
+            className="relative top-2 h-16 w-auto max-w-[260px] object-contain sm:top-2 sm:h-[72px] sm:max-w-[340px] lg:top-2 lg:h-[78px] lg:max-w-[390px]"
           />
-
-          <span className="whitespace-nowrap text-[18px] font-black tracking-[-0.07em] text-[#111111] sm:text-[25px] lg:text-[28px]">
-            TRANSMALDONIFICOS<span className="text-[#C8102E]">.</span>
-          </span>
         </Link>
 
         {/* NAVEGACIÓN DESKTOP */}
