@@ -126,3 +126,107 @@ a {
   to { transform: rotate(360deg); }
 }
 
+
+/* ZONA DE CARGA TRANSMALDONIFICOS */
+
+.quote-container {
+  background-image: linear-gradient(
+    135deg,
+    #d71936 0%,
+    #b90e2b 100%
+  );
+}
+
+.quote-truck {
+  transform: translateX(0);
+  transition: transform 0.7s cubic-bezier(.2,.8,.2,1);
+}
+
+.group:hover .quote-truck {
+  animation: quote-truck-drive 1.1s ease-in-out;
+}
+
+.quote-wheel {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.group:hover .quote-wheel {
+  animation: navbar-wheel-spin 0.4s linear infinite;
+}
+
+@keyframes quote-truck-drive {
+  0% {
+    transform: translateX(-35px);
+  }
+
+  45% {
+    transform: translateX(12px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .group:hover .quote-truck,
+  .group:hover .quote-wheel {
+    animation: none;
+  }
+}
+
+/* CAMIÓN CONTENEDOR DE COTIZACIÓN */
+
+.quote-truck-link {
+  display: block;
+  cursor: pointer;
+}
+
+.quote-truck-scene {
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.quote-truck-link:hover .quote-truck-scene {
+  animation: quote-scene-drive 0.8s ease-in-out;
+}
+
+.quote-scene-wheel {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.quote-truck-link:hover .quote-scene-wheel {
+  animation: quote-scene-spin 0.4s linear infinite;
+}
+
+.quote-container-shape {
+  transition: fill 0.3s ease;
+}
+
+.quote-truck-link:hover .quote-container-shape {
+  fill: #A50D25;
+}
+
+@keyframes quote-scene-drive {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(12px); }
+  65% { transform: translateX(7px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes quote-scene-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quote-truck-link:hover .quote-truck-scene,
+  .quote-truck-link:hover .quote-scene-wheel {
+    animation: none;
+  }
+}

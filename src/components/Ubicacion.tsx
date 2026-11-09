@@ -45,9 +45,15 @@ export default function Ubicacion() {
 
           <div className="flex flex-col justify-between border border-white/10 bg-[#191919] p-8 md:p-10">
             <div>
-              <div className="mb-8 flex h-14 w-14 items-center justify-center border border-[#C8102E] text-2xl font-black text-[#C8102E]">
-                T.
-              </div>
+              
+<div className="mb-8 flex h-20 w-20 items-center justify-center border border-black/20 bg-white p-2">
+  <img
+    src="/imagenes/Transmaldonificosimagen.png"
+    alt="Logo TransMaldonificos"
+    className="h-full w-full object-contain"
+  />
+</div>
+
 
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C8102E]">
                 TransMaldonificos · Bogotá D.C.
