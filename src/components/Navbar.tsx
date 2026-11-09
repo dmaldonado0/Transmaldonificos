@@ -7,7 +7,8 @@ import { useState } from "react";
 const enlaces = [
   { nombre: "Inicio", href: "#inicio" },
   { nombre: "Servicios", href: "#servicios" },
-  { nombre: "Nosotros", href: "#nosotros" },
+  { nombre: "Quiénes somos", href: "#quienes-somos" },
+  { nombre: "¿Por qué elegirnos?", href: "#porque-elegirnos" },
   { nombre: "Ubicación", href: "#ubicacion" },
   { nombre: "Contacto", href: "#contacto" },
 ];
@@ -47,14 +48,70 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* BOTÓN DESKTOP */}
-        <a
-          href="#contacto"
-          className="hidden items-center gap-3 bg-[#C8102E] px-6 py-4 text-[11px] font-black tracking-wider text-white transition duration-300 hover:bg-[#111111] lg:flex"
-        >
-          SOLICITAR SERVICIO
-          <span className="text-base">↗</span>
-        </a>
+      
+{/* BOTÓN DESKTOP - WHATSAPP ANIMADO */}
+<a
+  href="https://wa.me/573219467913?text=Hola%2C%20TransMaldonificos.%20Quiero%20solicitar%20informaci%C3%B3n%20sobre%20un%20servicio%20de%20transporte."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group relative hidden h-14 items-center justify-center gap-3 overflow-hidden bg-[#C8102E] px-6 text-white shadow-lg shadow-[#C8102E]/20 transition-all duration-300 hover:bg-[#A50D25] hover:shadow-xl hover:shadow-[#C8102E]/30 lg:flex"
+>
+  <span className="relative z-10 text-[11px] font-black uppercase tracking-wider transition-all duration-300 group-hover:-translate-x-1">
+    SOLICITAR SERVICIO
+  </span>
+
+ 
+<svg
+  viewBox="0 0 90 55"
+  className="navbar-truck relative z-10 h-9 w-16 shrink-0"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  {/* Plataforma transportadora */}
+  <path d="M3 34 H70 V39 H3 Z" fill="white" />
+  <path d="M5 40 H68" stroke="#111111" strokeWidth="2" />
+
+  {/* Cabina roja */}
+  <path d="M69 23 H78 L87 33 V39 H69 Z" fill="#E51B40" />
+  <path d="M73 26 H78 L83 33 H73 Z" fill="white" />
+  <rect x="85" y="34" width="3" height="3" rx="1" fill="#FFD166" />
+
+  {/* Carro transportado */}
+  <path
+    d="M17 22 L23 14 H48 L56 22 L61 23 V32 H14 V25 Z"
+    fill="#E51B40"
+    stroke="white"
+    strokeWidth="1.5"
+    strokeLinejoin="round"
+  />
+  <path d="M25 16 H46 L52 22 H21 Z" fill="white" />
+  <path d="M34 16 V22" stroke="#C8102E" strokeWidth="1.5" />
+
+  {/* Soportes de la plataforma */}
+  <path d="M8 32 V35 M64 32 V35" stroke="white" strokeWidth="2" />
+
+  {/* Ruedas */}
+  <g className="navbar-truck-wheel">
+    <circle cx="17" cy="41" r="5" fill="#111111" stroke="white" strokeWidth="1.5" />
+    <circle cx="17" cy="41" r="2" fill="white" />
+  </g>
+
+  <g className="navbar-truck-wheel">
+    <circle cx="58" cy="41" r="5" fill="#111111" stroke="white" strokeWidth="1.5" />
+    <circle cx="58" cy="41" r="2" fill="white" />
+  </g>
+
+  <g className="navbar-truck-wheel">
+    <circle cx="78" cy="41" r="5" fill="#111111" stroke="white" strokeWidth="1.5" />
+    <circle cx="78" cy="41" r="2" fill="white" />
+  </g>
+</svg>
+
+
+  <span className="absolute inset-0 -translate-x-full bg-white/10 transition-transform duration-500 group-hover:translate-x-0" />
+</a>
+
 
         {/* BOTÓN MÓVIL */}
         <button

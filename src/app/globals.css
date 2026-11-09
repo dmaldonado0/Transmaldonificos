@@ -96,7 +96,33 @@ a {
 @keyframes truck-wheel-spin {
   to { transform: rotate(360deg); }
 }
-/* MAPA OSCURO */
-.mapa-oscuro {
-  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(85%);
+
+/* CAMIÓN TRANSPORTADOR ANIMADO */
+.navbar-truck {
+  transition: transform 0.3s ease;
 }
+
+.group:hover .navbar-truck {
+  animation: navbar-truck-drive 0.7s ease-in-out;
+}
+
+.navbar-truck-wheel {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.group:hover .navbar-truck-wheel {
+  animation: navbar-wheel-spin 0.35s linear infinite;
+}
+
+@keyframes navbar-truck-drive {
+  0% { transform: translateX(0); }
+  45% { transform: translateX(12px); }
+  70% { transform: translateX(8px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes navbar-wheel-spin {
+  to { transform: rotate(360deg); }
+}
+
