@@ -105,7 +105,7 @@ export default function Home() {
           className="group border border-white/10 bg-[#111111] p-7 transition duration-300 hover:-translate-y-2 hover:border-[#C8102E]"
         >
           <span className="text-sm font-black text-[#C8102E]">
-            / {item.icono}
+             {item.icono}
           </span>
 
           <h3 className="mt-10 text-xl font-black leading-tight">
