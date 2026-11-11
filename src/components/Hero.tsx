@@ -12,16 +12,11 @@ export default function Hero() {
 <div
   className="absolute inset-0 -z-20 bg-cover bg-[position:58%_center] md:bg-center"
   style={{
-    backgroundImage: "url('/imagenes/transmaldonificosimagenlarga.png')",
+    backgroundImage: "url('/imagenes/scanioo.png')",
   }}
 />
 
-      {/* CAPAS OSCURAS */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#080808] via-[#080808]/85 to-[#080808]/25" />
-
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#080808]/95 via-transparent to-[#080808]/30" />
-
-      <div className="absolute inset-0 -z-10 bg-black/20" />
+      
 
       {/* DETALLE ROJO LATERAL */}
       <div className="absolute left-0 top-1/2 hidden h-40 w-1 -translate-y-1/2 bg-[#C8102E] lg:block" />

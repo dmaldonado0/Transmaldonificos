@@ -2,6 +2,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { SiGooglemaps } from "react-icons/si";
 
 const MapaUbicacion = dynamic(
   () => import("@/components/MapaUbicacion"),
@@ -20,6 +21,7 @@ export default function Ubicacion() {
     <section id="ubicacion" className="bg-[#111111] py-24 text-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
 
+        {/* ENCABEZADO */}
         <div className="mb-14">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-[2px] w-12 bg-[#C8102E]" />
@@ -41,19 +43,20 @@ export default function Ubicacion() {
           </p>
         </div>
 
+        {/* CONTENIDO */}
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
 
+          {/* INFORMACIÓN DE LA SEDE */}
           <div className="flex flex-col justify-between border border-white/10 bg-[#191919] p-8 md:p-10">
-            <div>
-              
-<div className="mb-8 flex h-20 w-20 items-center justify-center border border-black/20 bg-white p-2">
-  <img
-    src="/imagenes/Transmaldonificosimagen.png"
-    alt="Logo TransMaldonificos"
-    className="h-full w-full object-contain"
-  />
-</div>
 
+            <div>
+              <div className="mb-8 flex h-20 w-20 items-center justify-center border border-black/20 bg-white p-2">
+                <img
+                  src="/imagenes/Transmaldonificosimagen.png"
+                  alt="Logo TransMaldonificos"
+                  className="h-full w-full object-contain"
+                />
+              </div>
 
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C8102E]">
                 TransMaldonificos · Bogotá D.C.
@@ -72,6 +75,7 @@ export default function Ubicacion() {
               </p>
             </div>
 
+            {/* HORARIOS */}
             <div className="mt-12 border-t border-white/10 pt-8">
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C8102E]">
                 Atención
@@ -91,17 +95,24 @@ export default function Ubicacion() {
               </p>
             </div>
 
+            {/* BOTÓN GOOGLE MAPS */}
             <a
               href="https://www.google.com/maps/place/Transmaldonado/@4.6647209,-74.1446532,21z/data=!4m6!3m5!1s0x8e3f9df44d8bc3a7:0x2caa4b397610f5a3!8m2!3d4.6647247!4d-74.1445229!16s%2Fg%2F11zyzpp9xn?entry=ttu"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 flex w-fit items-center gap-3 bg-[#C8102E] px-7 py-4 text-sm font-bold uppercase tracking-wider transition hover:bg-[#A50D25]"
+              className="group mt-10 flex w-fit items-center gap-4 bg-[#C8102E] px-7 py-4 text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#111111]"
             >
-              Cómo llegar
-              <span>↗</span>
+              <SiGooglemaps className="text-2xl transition-transform duration-300 group-hover:scale-125" />
+
+              <span>Cómo llegar</span>
+
+              <span className="text-lg transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                ↗
+              </span>
             </a>
           </div>
 
+          {/* MAPA */}
           <div className="relative min-h-[420px] overflow-hidden border-2 border-black bg-white shadow-[0_0_0_1px_rgba(255,255,255,0.12)]">
             <MapaUbicacion />
 
@@ -112,6 +123,7 @@ export default function Ubicacion() {
                 <p className="text-sm font-black text-white">
                   TransMaldonificos.
                 </p>
+
                 <p className="mt-1 text-xs text-gray-400">
                   Nuestra sede · Bogotá D.C.
                 </p>
@@ -120,6 +132,7 @@ export default function Ubicacion() {
           </div>
         </div>
 
+        {/* FRANJA INFERIOR */}
         <div className="mt-10 flex flex-col justify-between gap-4 border-t border-white/10 pt-7 sm:flex-row sm:items-center">
           <p className="text-sm text-gray-500">
             Transporte especializado · Bogotá · Colombia

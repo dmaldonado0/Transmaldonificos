@@ -146,20 +146,52 @@ export default function Servicios() {
           ))}
         </div>
 
-        {/* NOTA DE COBERTURA */}
-        <div className="mt-12 flex flex-col gap-5 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+        {/* NOTA Y BOTONES INFERIORES */}
+        <div className="mt-12 flex flex-col gap-6 border-t border-white/10 pt-8 lg:flex-row lg:items-center lg:justify-between">
+
           <p className="max-w-3xl text-xs leading-6 text-gray-500 sm:text-sm">
             Cada servicio se evalúa según el peso, dimensiones, condiciones
             de transporte, capacidad del equipo y requisitos de la ruta.
           </p>
 
-          <a
-            href="#contacto"
-            className="inline-flex shrink-0 items-center gap-3 bg-[#C8102E] px-7 py-4 text-xs font-black uppercase tracking-wider text-white transition hover:bg-white hover:text-black"
-          >
-            Cotizar mi transporte
-            <span className="text-lg">→</span>
-          </a>
+          {/* BOTONES */}
+          <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
+
+            {/* COTIZAR */}
+            <a
+              href="#contacto"
+              className="inline-flex items-center justify-center gap-3 bg-[#C8102E] px-7 py-4 text-xs font-black uppercase tracking-wider text-white transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-black"
+            >
+              Cotizar mi transporte
+              <span className="text-lg">→</span>
+            </a>
+
+            {/* GALERÍA */}
+            <a
+  href="/galeria"
+  className="inline-flex items-center justify-center gap-3 border border-white/30 px-7 py-4 text-xs font-black uppercase tracking-wider text-white transition duration-300 hover:-translate-y-1 hover:border-[#C8102E] hover:bg-[#C8102E]"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="19"
+    height="19"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="2" />
+    <circle cx="8.5" cy="8.5" r="1.5" />
+    <path d="m21 15-5-5L5 21" />
+  </svg>
+
+  VER GALERÍA
+  <span className="text-lg">↗</span>
+</a>
+
+          </div>
         </div>
 
       </div>
