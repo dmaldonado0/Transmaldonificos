@@ -86,10 +86,18 @@ export default function GaleriaPage() {
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src="/galeria/Fotos/img1.jpeg"
-                  alt="Operación de transporte TransMaldonificos"
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                 />
               </div>
+
+
+
+
+
+
+
+
+
 
               <div className="p-6">
                 <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#C8102E]">
