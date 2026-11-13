@@ -18,50 +18,82 @@ export default function Home() {
 
         {/* QUIÉNES SOMOS */}
        
+
 {/* QUIÉNES SOMOS */}
 <section
   id="quienes-somos"
-  className="relative overflow-hidden bg-white py-24 px-6 md:px-16"
+  className="relative overflow-hidden bg-white px-6 py-24 md:px-16 lg:py-32"
 >
-  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 lg:gap-20 items-center">
+  <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-20">
 
-    {/* COLUMNA IZQUIERDA: TEXTO */}
+    {/* COLUMNA IZQUIERDA: CONTENIDO */}
     <div className="relative z-10">
 
-      <p className="text-[#C8102E] font-bold tracking-[0.35em] text-xs md:text-sm mb-7 uppercase">
-        Conoce nuestra empresa
-      </p>
+      {/* ETIQUETA */}
+      <div className="mb-7 flex items-center gap-3">
+        <span className="h-[2px] w-12 bg-[#C8102E]" />
+        <p className="text-xs font-black uppercase tracking-[0.3em] text-[#C8102E]">
+          Conoce nuestra empresa
+        </p>
+      </div>
 
-      <h2 className="text-4xl sm:text-5xl lg:text-5xl font-black leading-[1.12] tracking-tight mb-9">
-        SOMOS
+      {/* TÍTULO */}
+      <h2 className="mb-9 text-4xl font-black leading-[1.08] tracking-tight text-[#111111] sm:text-5xl lg:text-6xl">
+        TRANSPORTAMOS
         <br />
-        TRANSMALDONIFICOS.
+        CON EXPERIENCIA,
         <br />
         <span className="text-[#C8102E]">
-          MOVEMOS LO QUE IMPORTA.
+          RESPALDO Y CONFIANZA.
         </span>
       </h2>
 
-      <div className="max-w-xl space-y-6 text-gray-600 text-base md:text-lg leading-8">
+      {/* TEXTO PRINCIPAL */}
+      <div className="max-w-xl space-y-6 text-base leading-8 text-gray-600 md:text-lg">
 
         <p>
-          Somos una empresa enfocada en brindar soluciones de transporte
-          especializado para vehículos, maquinaria y diferentes tipos de carga.
-          Trabajamos en la coordinación de cada operación, buscando ofrecer
-          alternativas adaptadas a las necesidades de nuestros clientes.
+          En <strong className="font-black text-[#111111]">TransMaldonificos</strong>,
+          entendemos que detrás de cada transporte existe algo más que una carga:
+          hay inversiones, proyectos, responsabilidades y personas que depositan
+          su confianza en nosotros.
         </p>
 
         <p>
-          Nuestra visión es construir relaciones comerciales basadas en la
-          confianza, el compromiso y la atención personalizada.
+          Somos una empresa dedicada al transporte especializado, enfocada en
+          brindar soluciones para el traslado de vehículos, maquinaria y
+          diferentes tipos de carga. Nuestro conocimiento del sector y la
+          experiencia adquirida en cada operación nos permiten comprender las
+          necesidades de nuestros clientes y coordinar cada servicio con
+          responsabilidad y compromiso.
+        </p>
+
+        <p>
+          Nos caracterizamos por trabajar con seriedad, comunicación transparente
+          y atención personalizada. Creemos que la confianza se construye
+          cumpliendo la palabra, ofreciendo información clara y cuidando cada
+          detalle durante el proceso.
+        </p>
+
+        <p>
+          Más que conectar un punto de origen con un destino, buscamos construir
+          relaciones duraderas con nuestros clientes, convirtiéndonos en un
+          aliado confiable para sus necesidades de transporte.
         </p>
 
       </div>
 
-      {/* DETALLE INFERIOR */}
-      <div className="flex items-center gap-4 mt-10">
-        <div className="w-14 h-1 bg-[#C8102E] rounded-full"></div>
-        <p className="text-black font-bold tracking-widest text-xs uppercase">
+      {/* FRASE DESTACADA */}
+      <div className="mt-10 border-l-4 border-[#C8102E] bg-gray-50 px-6 py-5">
+        <p className="text-lg font-black leading-relaxed text-[#111111] md:text-xl">
+          No se trata solamente de transportar. Se trata de responder por la
+          confianza que depositan en nosotros.
+        </p>
+      </div>
+
+      {/* FIRMA INFERIOR */}
+      <div className="mt-10 flex items-center gap-4">
+        <div className="h-1 w-14 rounded-full bg-[#C8102E]" />
+        <p className="text-xs font-black uppercase tracking-[0.2em] text-gray-500">
           Compromiso en cada recorrido
         </p>
       </div>
@@ -69,34 +101,50 @@ export default function Home() {
     </div>
 
     {/* COLUMNA DERECHA: IMAGEN */}
-    <div className="relative">
+    <div className="relative mx-auto w-full max-w-xl lg:max-w-none">
 
-      {/* DETALLE DECORATIVO */}
-      <div className="absolute -top-5 -right-5 w-32 h-32 border-t-4 border-r-4 border-[#C8102E] rounded-tr-3xl z-0"></div>
+      {/* DETALLE SUPERIOR */}
+      <div className="absolute -right-4 -top-4 z-0 h-32 w-32 rounded-tr-3xl border-r-4 border-t-4 border-[#C8102E] sm:-right-5 sm:-top-5" />
 
-      <div className="relative z-10 h-[380px] sm:h-[480px] lg:h-[550px] overflow-hidden rounded-2xl shadow-2xl">
+      {/* IMAGEN PRINCIPAL */}
+      <div className="relative z-10 h-[400px] overflow-hidden rounded-sm shadow-2xl sm:h-[500px] lg:h-[610px]">
 
         <img
           src="/imagenes/Transmaldonificosimagen.png"
-          alt="Operaciones de transporte de TransMaldonificos"
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+          alt="TransMaldonificos, transporte especializado"
+          className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
         />
 
-        {/* DEGRADADO INFERIOR */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+        {/* DEGRADADO */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
 
         {/* IDENTIFICADOR */}
-        <div className="absolute bottom-6 left-6">
-          <p className="text-white text-xs tracking-[0.3em] font-bold uppercase">
-            TransMaldonificos
+        <div className="absolute bottom-8 left-8">
+          <p className="text-xs font-bold uppercase tracking-[0.35em] text-gray-300">
+            Nuestra identidad
           </p>
-          <div className="w-12 h-1 bg-[#C8102E] mt-3 rounded-full"></div>
+
+          <h3 className="mt-2 text-3xl font-black text-white sm:text-4xl">
+            TransMaldonificos.
+          </h3>
+
+          <div className="mt-4 h-1 w-16 rounded-full bg-[#C8102E]" />
         </div>
 
       </div>
 
-      {/* DETALLE DECORATIVO INFERIOR */}
-      <div className="absolute -bottom-5 -left-5 w-32 h-32 border-b-4 border-l-4 border-[#C8102E] rounded-bl-3xl z-0"></div>
+      {/* DETALLE INFERIOR */}
+      <div className="absolute -bottom-5 -left-4 z-0 h-32 w-32 rounded-bl-3xl border-b-4 border-l-4 border-[#C8102E] sm:-bottom-6 sm:-left-5" />
+
+      {/* ETIQUETA DECORATIVA */}
+      <div className="absolute -bottom-8 right-0 z-20 hidden border border-gray-200 bg-white px-7 py-5 shadow-xl sm:block">
+        <p className="text-xs font-black uppercase tracking-[0.2em] text-[#C8102E]">
+          Transporte especializado
+        </p>
+        <p className="mt-1 text-sm font-bold text-[#111111]">
+          Bogotá · Colombia
+        </p>
+      </div>
 
     </div>
 
